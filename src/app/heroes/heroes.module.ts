@@ -7,12 +7,13 @@ import { ListPageComponent } from './pages/listPage/listPage.component';
 import { NewPageComponent } from './pages/newPage/newPage.component';
 import { SearchPageComponent } from './pages/searchPage/searchPage.component';
 import { MaterialModule } from '../material/material.module';
+import { HeroesService } from './services/hero.service';
 
 @NgModule({
   imports: [
     CommonModule,
     HeroesRoutingModule,
-    MaterialModule
+    MaterialModule,
   ],
   exports: [],
   declarations: [
@@ -20,7 +21,8 @@ import { MaterialModule } from '../material/material.module';
     LayoutPageComponent,
     ListPageComponent,
     NewPageComponent,
-    SearchPageComponent
+    SearchPageComponent,
+
   ],
   providers: [],
 })
