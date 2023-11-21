@@ -11,4 +11,20 @@ export class LayoutPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  public sidebarItems = [
+    {
+      label: 'Listado',
+      icon: 'label',
+      url: './list'
+    }, {
+      label: 'añadir',
+      icon: 'add',
+      url: './new-hero'
+    }, {
+      label: 'buscar',
+      icon: 'search',
+      url: './search'
+    }
+  ]
+
 }

@@ -6,11 +6,13 @@ import { LayoutPageComponent } from './pages/layoutPage/layoutPage.component';
 import { ListPageComponent } from './pages/listPage/listPage.component';
 import { NewPageComponent } from './pages/newPage/newPage.component';
 import { SearchPageComponent } from './pages/searchPage/searchPage.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    HeroesRoutingModule
+    HeroesRoutingModule,
+    MaterialModule
   ],
   exports: [],
   declarations: [
