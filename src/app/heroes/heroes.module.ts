@@ -8,6 +8,7 @@ import { NewPageComponent } from './pages/newPage/newPage.component';
 import { SearchPageComponent } from './pages/searchPage/searchPage.component';
 import { MaterialModule } from '../material/material.module';
 import { HeroesService } from './services/hero.service';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { HeroesService } from './services/hero.service';
     ListPageComponent,
     NewPageComponent,
     SearchPageComponent,
+    CardComponent,
 
   ],
   providers: [],
