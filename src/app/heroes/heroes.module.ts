@@ -9,6 +9,8 @@ import { SearchPageComponent } from './pages/searchPage/searchPage.component';
 import { MaterialModule } from '../material/material.module';
 import { HeroesService } from './services/hero.service';
 import { CardComponent } from './components/card/card.component';
+import { HeroImagePipe } from './pipes/hero-image.pipe';
+
 
 @NgModule({
   imports: [
@@ -24,6 +26,8 @@ import { CardComponent } from './components/card/card.component';
     NewPageComponent,
     SearchPageComponent,
     CardComponent,
+
+    HeroImagePipe
 
   ],
   providers: [],
