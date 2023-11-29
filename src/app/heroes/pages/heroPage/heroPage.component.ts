@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { delay, switchMap } from 'rxjs';
 import { Hero } from '../../interfaces/hero.interface';
 import { HeroesService } from '../../services/hero.service';
 
@@ -31,4 +31,10 @@ console.log(hero)
       return;
     })
 }
+
+
+goBack(){
+  this.router.navigateByUrl ('heroes/list')
+}
+
 }
