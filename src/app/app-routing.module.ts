@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { Error404PageComponent } from './shared/pages/Error404Page/Error404Page.component';
+import { AuthGuard } from './auth/guards/auth.guards';
 
 
 const routes: Routes = [
@@ -11,6 +12,8 @@ const routes: Routes = [
   }, {
     path: 'heroes',
     loadChildren: () => import('./heroes/heroes.module').then( m => m.HeroesModule),
+    canActivate:[AuthGuard],
+    canMatch:[AuthGuard]
   }, {
     path: '404',
     component: Error404PageComponent,
