@@ -3,12 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { Error404PageComponent } from './shared/pages/Error404Page/Error404Page.component';
 import { AuthGuard } from './auth/guards/auth.guards';
+import { PublicGuard } from './auth/guards/public.guards';
 
 
 const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule),
+    canActivate:[PublicGuard],
+    canMatch:[PublicGuard]
   }, {
     path: 'heroes',
     loadChildren: () => import('./heroes/heroes.module').then( m => m.HeroesModule),
