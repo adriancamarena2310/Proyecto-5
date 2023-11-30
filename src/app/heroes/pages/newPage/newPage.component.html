@@ -6,7 +6,7 @@
 
 <mat-divider class="mb-2"></mat-divider>
 
-<div class="grid">
+<form class="grid" [formGroup]="heroForm" (ngSubmit)="onSubmit()">
 
   <div class="col-12 sm:col-6">
     <mat-card>
@@ -20,6 +20,8 @@
               matInput
               type="text"
               required
+              formControlName
+              formControlName="superhero"
             />
           </mat-form-field>
 
@@ -29,6 +31,7 @@
               matInput
               type="text"
               required
+              formControlName="alter_ego"
             />
           </mat-form-field>
 
@@ -39,6 +42,7 @@
               matInput
               type="text"
               required
+              formControlName="first_apperance"
             />
           </mat-form-field>
 
@@ -48,17 +52,33 @@
               matInput
               type="text"
               required
+              formControlName="characters"
             />
           </mat-form-field>
 
           <mat-form-field class="col-12">
             <mat-label>Creador</mat-label>
-            <mat-select required="">
+            <mat-select
+             required
+            formControlName="publisher"
+             formControlName="superhero"
+             >
               <mat-option *ngFor="let publisher of publishers"
                 [value]="publisher.id">
                 {{ publisher.desc }}
               </mat-option>
             </mat-select>
+          </mat-form-field>
+
+
+          <mat-form-field class="col-12">
+            <mat-label>Alternative Image</mat-label>
+            <input
+              matInput
+              type="text"
+
+              formControlName="alt_img"
+            />
           </mat-form-field>
         </div>
 
@@ -73,6 +93,7 @@
           <button
             mat-flat-button
             color="primary"
+            (click)="onSubmit()"
           >
             <mat-icon>save</mat-icon>
             Guardar
@@ -90,4 +111,4 @@
     </mat-card>
 
   </div>
-</div>
+</form>
